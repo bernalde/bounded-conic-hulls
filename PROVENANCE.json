@@ -1,0 +1,48 @@
+{
+  "parent_private_revision": "ce8364a2f1b17ba40b8536d79f2d37656095470d",
+  "copied_sources": [
+    {
+      "source": "lean-modern/Chapter02.lean",
+      "destination": "Chapter02.lean",
+      "sha256": "3019ef1caad4ab531143bd937fae56812bb9959a658bbe7368b5d5c761cc08af",
+      "byte_identical": true
+    },
+    {
+      "source": "lean-modern/Chapter02Model.lean",
+      "destination": "Chapter02Model.lean",
+      "sha256": "01043a5cc7eb7291f008533cf2c8276773368541a7a15ef83756f50fc6f3a535",
+      "byte_identical": true
+    },
+    {
+      "source": "lean-modern/Chapter08.lean",
+      "destination": "Chapter08.lean",
+      "sha256": "07485984a4fd3c4a33daf1d3c6ce1e80209d7508b0f5c3074e913f6b18c1a746",
+      "byte_identical": true
+    },
+    {
+      "source": "lean-modern/Chapter08ContinuousHull.lean",
+      "destination": "Chapter08ContinuousHull.lean",
+      "sha256": "841036701c1f96f3f6e261396b87532ee4fa11a146719f97ebcdd1df34666f0a",
+      "byte_identical": true
+    },
+    {
+      "source": "lean-modern/Chapter08HullCompact.lean",
+      "destination": "Chapter08HullCompact.lean",
+      "sha256": "493a7d174e873e2c543ad6c5acfbbb2cf9a2e47bc9f82ebc419ce8b8d326cae0",
+      "byte_identical": true
+    }
+  ],
+  "scientific_acceptance": "formal/CH08-conic-formulation-certificate.md",
+  "modern_migration_acceptance": "audit/lean-completion/PROJECT-S225/FINAL-TECHNICAL-QUALIFICATION.json",
+  "wrapper_statement_policy": "Exact accepted theorem types; only exported names change. Independent Challenge imports Mathlib only and inlines the relevant mathematical definitions. Solution imports copied full proofs, never Challenge.",
+  "scope": "For a finite index type and finite real coordinate bounds, each branch is a boxed affine conic inverse image with its own residual dimension. Zero, convexity and closure-under-nonnegative-scaling hypotheses give exact equality between the continuous perspective lift projection and the convex hull of the branch union. Closed cone sets additionally yield compactness of the full lift and equality with the closed convex hull. Empty branches, empty unions and empty index types are retained; zero weights force copied coordinates to zero. This is a bounded single-union theorem, not unrestricted epigraph conversion, whole-GDP ideality, numerical performance or solver certification.",
+  "new_scientific_credit": false,
+  "license": "Apache-2.0",
+  "metadata_refresh": {
+    "date": "2026-11-05",
+    "original_clean_export_commit": "470c381e43a825df81fd25e6d0cce7f4dea1514a",
+    "proof_inputs": "unchanged",
+    "licence_authority": "Owner decision of 3 November 2026 for project-owned proof code/tools/software documentation; third-party rights retained",
+    "service_submission": "not performed by metadata preparation"
+  }
+}

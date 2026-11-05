@@ -1,0 +1,96 @@
+{
+  "state": "PASS_ACTUAL_BUILD_AXIOMS_SANDBOXED_COMPARATOR_BUNDLED_KERNELS",
+  "toolchain": "leanprover/lean4:v4.35.0",
+  "lean_version": "Lean (version 4.35.0, x86_64-unknown-linux-gnu, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+  "input_sha256": {
+    "Chapter08.lean": "07485984a4fd3c4a33daf1d3c6ce1e80209d7508b0f5c3074e913f6b18c1a746",
+    "Chapter08HullCompact.lean": "493a7d174e873e2c543ad6c5acfbbb2cf9a2e47bc9f82ebc419ce8b8d326cae0",
+    "comparator.json": "0856b492e0377a1bef44d10c114e5384df6c0b794ba6e9b5c5cea7765c00454b",
+    "lake-manifest.json": "89992660c77157c2e99129b4c402e101ea534264ed63b64d5f10ce6dbb436233",
+    "Solution.lean": "c359bf3878622d1e6e45263587f399876befb152fea2f2e519d59403c5754742",
+    "Chapter02.lean": "3019ef1caad4ab531143bd937fae56812bb9959a658bbe7368b5d5c761cc08af",
+    "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+    "Chapter02Model.lean": "01043a5cc7eb7291f008533cf2c8276773368541a7a15ef83756f50fc6f3a535",
+    "Chapter08ContinuousHull.lean": "841036701c1f96f3f6e261396b87532ee4fa11a146719f97ebcdd1df34666f0a",
+    "Challenge.lean": "9d100e32187808461ff04da11d24d47f60bcbfb0a1c539d63b1c5f564e6bbc26",
+    "AxiomAudit.lean": "53a613c044cebd61cd033824881fc884dba5a800ef60edc67deee00dc9c52a86",
+    "lakefile.toml": "ef09f162ed4fc9bf838101cdeeb40eda787e7cc3ee1ed373ba8a6abe4c3bceca"
+  },
+  "steps": [
+    {
+      "name": "source-format",
+      "argv": [
+        "python3",
+        "scripts/check-lean-sources.py"
+      ],
+      "started_utc": "2026-11-01T15:56:11.566847+00:00",
+      "elapsed_seconds": 0.025818237991188653,
+      "exit_code": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "build",
+      "argv": [
+        "lake",
+        "build"
+      ],
+      "started_utc": "2026-11-01T15:56:11.592808+00:00",
+      "elapsed_seconds": 27.49699978699209,
+      "exit_code": 0,
+      "stdout_sha256": "32ed946611684ffae6b79e1ae5d563f845fea3cd11077f4f422fc07ea8b99d8a",
+      "stderr_sha256": "79c8829a564606f3bebfc74fefd15e38c25421d5d4d1ce72656d53626b0d22df"
+    },
+    {
+      "name": "axioms",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "AxiomAudit.lean"
+      ],
+      "started_utc": "2026-11-01T15:56:39.089969+00:00",
+      "elapsed_seconds": 4.407028854999226,
+      "exit_code": 0,
+      "stdout_sha256": "8dad505563c620c8fcb6740b91fde22d02c254a770a50e6dd655206db5fc2260",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "comparator",
+      "argv": [
+        "lake",
+        "comparator",
+        "--config",
+        "/home/bernalde/repos/thesis_ai_remake/audit/lean-completion/PROJECT-S230/conic-verification01/comparator-local.json"
+      ],
+      "started_utc": "2026-11-01T15:56:43.497458+00:00",
+      "elapsed_seconds": 51.782855899989954,
+      "exit_code": 0,
+      "stdout_sha256": "eb0e523b9b80dd84729c47412ba493c97de05ef18aeda1b0fc95212189da2c00",
+      "stderr_sha256": "7d5914578867f7566e2fb88af36272824c6aa40b8e4828cfcea23485a4fa693c"
+    }
+  ],
+  "no_service_submission": true,
+  "upstream_cache": "Matching pinned Mathlib/dependency objects may be reused; package sources build independently.",
+  "solution_axioms": {
+    "PalomarConicHull.exact_hull": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PalomarConicHull.compact_lift": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PalomarConicHull.closed_hull": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "packaging_status": "LOCAL_MECHANICALLY_VERIFIED_LICENSE_PENDING",
+  "evidence_origin": "PROJECT-S230/conic-verification01",
+  "template_release_license_check": "HELD_PENDING_AUTHOR_LICENSE_DECISION",
+  "public_release_approved": false
+}
